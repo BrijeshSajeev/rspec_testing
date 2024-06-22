@@ -16,4 +16,9 @@ RSpec.describe "Addition" do
     expect(add(0, 10)).to eq(10)
     expect(add(0, 0)).to eq(0)
   end
+  it "adds negative numbers" do
+    expect(add(-2, 3)).to eq(1)
+    expect(add(-5, -10)).to eq(-15)
+    expect(add(5, -3)).to eq(2)
+  end
 end
