@@ -22,10 +22,20 @@ RSpec.describe "Test for multiplication" do
     expect(mul(3, 10)).to eq(30)
     expect(mul(10, 2)).to eq(20)
   end
+
   it "multiplie's negative numbers" do
     expect(mul(-2, 3)).to eq(-6)
     expect(mul(-5, -10)).to eq(50)
     expect(mul(5, -3)).to eq(-15)
   end
 
+  it "returns the other argument if agr1 is nil" do
+    expect(mul(nil, 3)).to eq(3)
+    expect(mul(nil, 4)).to eq(4)
+  end
+
+  it "returns the other argument if agr2 is nil" do
+    expect(mul(3,nil)).to eq(3)
+    expect(mul(-4,nil)).to eq(-4)
+  end
 end
